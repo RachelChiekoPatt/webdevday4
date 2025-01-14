@@ -5,8 +5,13 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #282828;
-	max-width: 31.25rem;
+	/*max-width: 31.25rem;
+	/*margin: 0 auto;*/
+}
+main {
+	max-width: 75rem;
 	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,7 +103,7 @@ nav a {
 	background-color: #347034;
 	color: #ffffff;
 	text-align: center;
-	font-size: 1.125rem;
+	font-size: 1.125rem;	
 	text-decoration: none;
 }
 .services a:hover,
@@ -107,7 +112,25 @@ nav a {
 	background-color: #234723;
 }
 
-
+@media (min-width: 50em) {
+	.services article {
+		background-color: #caebff;
+	}
+	.services a {
+		background-color: rgb(11, 218, 218);
+	}
+	.cards {
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		/*flex-direction: column;
+		flex-direction: column-reverse;
+		flex-direction: row-reverse;*/
+	}
+	.cards article {
+		width: 30%;
+	}
+}
 /* Testimonials Styles */
 .testimonials img {
 	display: block;
