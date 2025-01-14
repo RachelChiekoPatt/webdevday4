@@ -128,7 +128,12 @@ nav a {
 		flex-direction: row-reverse;*/
 	}
 	.cards article {
-		width: 30%;
+		/*width: 30%;*/
+		flex: 0 1 30%
+	}
+	.cards .service-1 {
+		flex: 0 1 50%;
+		order: 1;
 	}
 }
 /* Testimonials Styles */
@@ -146,4 +151,20 @@ nav a {
 .testimonials blockquote p {
 	display: inline-block;
 	margin: 0;
+}
+/* code below is to make the images align in a pretty way when the screen page changes*/
+@media (min-width: 37.5em) {
+	.testimonials {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.testimonials > *:not(article) {
+		width: 100%;
+	}
+
+	.testimonials article {
+		max-width: 20em;
+	}
+
 }
