@@ -19,8 +19,9 @@
 # Base
 --------------------------------------------------------------*/
 
-/* Typography
---------------------------------------------- */
+/* Typography*/
+
+
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 1rem;
@@ -44,6 +45,21 @@ h6 {
 p {
 	margin: 0 0 1.5em;
 }
+.site-name {
+	color: #282828;
+	font-size: 250%;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding-right: 2rem;
+	
+}
+.section-about {
+	padding: 2rem;
+	line-height: 2rem;
+}
+.section-about h2 {
+	text-align: center;
+	text-size-adjust: 125%;
+}
 
 
 /* Elements
@@ -56,15 +72,36 @@ aside {
 
 /* Links
 --------------------------------------------- */
+.product-link {
+	color: white;
+	background-color: #389f2d;
+	padding: 1rem;
+	margin: 1rem;
+}
+	
+.product {
+	border: 0px solid transparent;
+	box-shadow: 0px 5px 25px 5px rgb(67, 67, 67); /* this should be different, but I kind of love this.*/
+	padding-bottom: 10rem;
+	display: inline-block;
+	text-align: center;
+	margin: 2rem .5rem;
+	padding-bottom: 3rem;
+}
+.product-name {
+	text-size-adjust:80%;
+}
+
 a,
 a:visited { 
-	color: #008000;
+	color:  #191c63;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
+	color: #282828;
 	text-decoration: underline;
 }
 
@@ -83,6 +120,100 @@ a:focus {
 
 /* Header
 --------------------------------------------- */
+.site-header {
+	background-color: white;
+	/* add flex styles here */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.site-logo {
+	max-width: 6rem;
+	margin: 1rem;
+}
+
+.site-logo img {
+	display: block;
+}
+
+.site-navigation {
+	padding: 0 1rem;
+}
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* START -- STYLES FOR MOBILE MENU */
+/* we will cover this more later */
+.site-navigation ul {
+	color: #282828;
+	display: none;
+	position: absolute;
+	top: 8rem;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #ffffff;
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+/* END -- STYLES FOR MOBILE MENU */
+
+
+@media (min-width: 43.75em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-navigation {
+		padding: 0 1rem;
+		/* add flex styles here */
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		/* add flex styles here */
+
+		/* START - Remove Mobile Menu Styles */
+		position: relative;
+		top: 0;
+		/* END - Remove Mobile Menu Styles  */
+	}
+
+	.site-navigation a {
+		line-height: 8rem; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
+		padding: 0 1rem;
+	}
+
+}
 
 
 
